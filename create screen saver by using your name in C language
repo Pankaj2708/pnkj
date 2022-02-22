@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+char v;
+int gd=DETECT,gm,i;
+initgraph(&gd,&gm,"C:\\TC\\BGI");
+delay(500);
+while(1)
+{
+for(i=0;i<=100;i=i+5)
+{
+outtextxy(100+i,100+i,"JAI HIND");
+delay(100);
+cleardevice();
+}
+for(i=0;i<=100;i=i+5)
+{
+outtextxy(400,400-i,"JAI HIND");
+delay(100);
+cleardevice();
+}
+for(i=0;i<=100;i=i+5)
+{
+outtextxy(400-i,100,"JAI HIND");
+delay(100);
+cleardevice();
+}
+for(i=0;i<=100;i=i+5)
+{
+outtextxy(100,100+i,"JAI HIND");
+delay(100);
+cleardevice();
+}
+for(i=0;i<=100;i=i+5)
+{
+outtextxy(100+i,400-i,"JAI HIND");
+delay(100);
+cleardevice();
+}
+if(kbhit())
+{
+v=getch();
+if(v='x') {
+exit(0);
+}
+}
+}
+}
