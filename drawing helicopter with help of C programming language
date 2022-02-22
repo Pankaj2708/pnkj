@@ -1,0 +1,87 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+void main()
+{
+
+int gd=DETECT,gm,b;
+initgraph(&gd,&gm,"C:\\TC\\BGI");
+delay(500);
+//Hellipad
+rectangle(0,300,180,392);
+settextstyle(1,HORIZ_DIR,4);
+outtextxy(50,320,"PATNA");
+for(b=0;b<100;b++)
+{
+ // Helicopter
+  setcolor(WHITE);
+  line(216+b,235-b,75+b,235-b);
+  line(115+b,247-b,120+b,240-b);
+  line(166+b,247-b,161+b,240-b);
+  line(120+b,240-b,161+b,240-b);
+  line(139+b,240-b,139+b,235-b);
+  line(141+b,240-b,141+b,235-b);
+  arc(141+b,272-b,140,180,40);
+  arc(140+b,272-b,0,40,40);
+  line(165+b,248-b,165+b,266-b);
+  line(165+b,266-b,180+b,266-b);
+  rectangle(130+b,282-b,150+b,255-b);
+  circle(147+b,268-b,1);
+  line(110+b,247-b,171+b,247-b);
+  line(30+b,275-b,100+b,272-b);
+  line(180+b,273-b,180+b,285-b);
+  line(25+b,285-b,180+b,285-b);
+  line(30+b,275-b,20+b,260-b);
+  line(20+b,260-b,14+b,260-b);
+  line(14+b,260-b,25+b,285-b);
+  circle(18+b,262-b,1);
+  //Legs
+  line(80+b,299-b,167+b,299-b);
+  line(80+b,295-b,167+b,295-b);
+  line(80+b,295-b,80+b,299-b);
+  arc(167+b,279-b,270,310,20);
+  arc(167+b,275-b,270,310,20);
+  line(180+b,291-b,180+b,293-b);
+  line(110+b,285-b,110+b,295-b);
+  line(113+b,285-b,113+b,295-b);
+  line(165+b,285-b,160+b,295-b);
+  line(163+b,285-b,158+b,295-b);
+  delay(30);
+
+  setcolor(BLACK);
+  line(216+b,235-b,75+b,235-b);
+  line(115+b,247-b,120+b,240-b);
+  line(166+b,247-b,161+b,240-b);
+  line(120+b,240-b,161+b,240-b);
+  line(139+b,240-b,139+b,235-b);
+  line(141+b,240-b,141+b,235-b);
+  arc(141+b,272-b,140,180,40);
+  arc(140+b,272-b,0,40,40);
+  line(165+b,248-b,165+b,266-b);
+  line(165+b,266-b,180+b,266-b);
+  rectangle(130+b,282-b,150+b,255-b);
+  circle(147+b,268-b,1);
+  line(110+b,247-b,171+b,247-b);
+  line(30+b,275-b,100+b,272-b);
+  line(180+b,273-b,180+b,285-b);
+  line(25+b,285-b,180+b,285-b);
+  line(30+b,275-b,20+b,260-b);
+  line(20+b,260-b,14+b,260-b);
+  line(14+b,260-b,25+b,285-b);
+  circle(18+b,262-b,1);
+  //Legs
+  line(80+b,299-b,167+b,299-b);
+  line(80+b,295-b,167+b,295-b);
+  line(80+b,295-b,80+b,299-b);
+  arc(167+b,279-b,270,310,20);
+  arc(167+b,275-b,270,310,20);
+  line(180+b,291-b,180+b,293-b);
+  line(110+b,285-b,110+b,295-b);
+  line(113+b,285-b,113+b,295-b);
+  line(165+b,285-b,160+b,295-b);
+  line(163+b,285-b,158+b,295-b);
+  delay(30);
+
+}
+
+}
