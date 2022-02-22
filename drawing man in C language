@@ -1,0 +1,77 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<math.h>
+void main()
+{
+int gd=DETECT,gm,i;
+initgraph(&gd,&gm,"C:\\TC\\BGI");
+//setbkcolor(BLACK);
+delay(500);
+	  //SUN
+	  circle(300,100,40);
+	  setfillstyle(1,14);
+	  floodfill(280,100,WHITE);
+
+
+	 //MOUNTAINS
+	  line(0,250,100,150);
+	  line(100,150,200,250);
+
+	  line(200,250,300,150);
+	  line(300,150,400,250);
+
+	  line(400,250,500,150);
+	  line(500,150,600,250);
+
+	//cloud
+	 setfillstyle(SOLID_FILL,WHITE);
+	 arc(50,70,45,135,50);
+	 arc(100,70,45,135,50);
+	 arc(150,70,45,135,50);
+	 arc(50,70,135,225,50);
+	 arc(100,70,225,315,50);
+	 arc(50,70,225,315,50);
+	 arc(150,70,225,315,50);
+	 arc(150,70,315,45,50);
+	 floodfill(100,70,WHITE);
+
+	 setfillstyle(SOLID_FILL,WHITE);
+	 arc(450,70,45,135,50);
+	 arc(500,70,45,135,50);
+	 arc(550,70,45,135,50);
+	 arc(450,70,135,225,50);
+	 arc(500,70,225,315,50);
+	 arc(450,70,225,315,50);
+	 arc(550,70,225,315,50);
+	 arc(550,70,315,45,50);
+	 floodfill(450,70,WHITE);
+	 //man
+
+      for(i=0;i<=200;i=i+5)
+	{
+	  setcolor(WHITE);
+	  //head
+	  circle(50+i,380,20);
+	  //body
+	  line(50+i,400,50+i,450);
+	  //hand
+	  line(50+i,420,30+i,435);
+	  line(50+i,420,70+i,435);
+	  //leg
+
+	  line(50+i,450,30+i,465);
+	  line(50+i,450,70+i,465);
+	  delay(100);
+	  setcolor(BLACK);
+	  circle(50+i,380,20);
+	  line(50+i,400,50+i,450);
+	  line(50+i,420,30+i,435);
+	  line(50+i,420,70+i,435);
+	  line(50+i,450,30+i,465);
+	  line(50+i,450,70+i,465);
+	}
+
+
+getch();
+}
