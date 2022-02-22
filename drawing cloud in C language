@@ -1,0 +1,79 @@
+#include<graphics.h>
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int gd=DETECT,gm,i;
+initgraph(&gd,&gm,"C:\\TC\\BGI");
+
+for(i=0;i<=100;i++)
+{
+setcolor(YELLOW);
+//FIRST HAND
+line(10+i,310,0+i,320);
+line(10+i,308,0+i,318);
+line(0+i,320,8+i,323);
+line(0+i,318,8+i,323);
+
+setcolor(GREEN);
+//SECOND HAND
+line(10+i,310,15+i,320);
+line(9+i,310,16+i,321);
+line(15+i,320,18+i,312);
+line(16+i,321,19+i,313);
+
+setcolor(GREEN);
+//FIRST LEG
+setfillstyle(SOLID_FILL,GREEN);
+line(10+i,340,13+i,360);
+line(13+i,360,10+i,375);
+ellipse(13+i,375,0,360,4,2);
+floodfill(14+i,375,GREEN);
+
+setcolor(WHITE);
+//SECOND LEG
+setfillstyle(SOLID_FILL,WHITE);
+line(10+i,340,8+i,360);
+line(8+i,360,1+i,364);
+ellipse(2+i,367,0,360,2,4);
+floodfill(3+i,367,WHITE);
+delay(100);
+cleardevice();
+}
+for(i=0;i<=100;i++)
+{
+setcolor(RED);
+//SECOND HAND in 2
+line(10+i,310,5+i,323);
+line(8+i,310,4+i,323);
+line(5+i,323,12+i,320);
+line(4+i,323,12+i,320);
+setcolor(WHITE);
+
+//FIRST HAND in 2
+line(10+i,310,13+i,323);
+line(11+i,310,14+i,324);
+line(13+i,323,18+i,313);
+line(14+i,324,17+i,313);
+
+setcolor(WHITE);
+
+//LEG
+setfillstyle(SOLID_FILL,WHITE);
+line(10+i,340,11+i,363);
+line(11+i,360,7+i,375);
+ellipse(9+i,375,0,360,4,2);
+floodfill(10+i,375,WHITE);
+
+setcolor(LIGHTCYAN);
+setfillstyle(1,11);
+line(10+i,340,13+i,360);
+line(13+i,360,2+i,363);
+ellipse(1+i,365,0,360,2,4);
+floodfill(2+i,365,11);
+
+delay(100);
+cleardevice();
+}
+getch();
+}
